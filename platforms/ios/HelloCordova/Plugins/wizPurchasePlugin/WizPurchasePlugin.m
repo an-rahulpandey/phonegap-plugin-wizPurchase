@@ -11,14 +11,14 @@
 
 @implementation WizPurchasePlugin
 
-- (CDVPlugin *)initWithWebView:(UIWebView *)theWebView {
-
+//- (CDVPlugin *)initWithWebView:(UIWebView *)theWebView {
+-(void)pluginInitialize {
     if (self) {
         // Register ourselves as a transaction observer
         // (we get notified when payments in the payment queue get updated)
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     }
-    return self;
+    //return self;
 }
 
 - (BOOL)canMakePurchase {
